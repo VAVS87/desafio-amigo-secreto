@@ -34,7 +34,8 @@ function agregarAmigo(){
 function actualizarLista() {
     let lista = document.getElementById("listaAmigos");
     lista.innerHTML = ""; // asegurarse de que no haya duplicados al actualizar
-
+   lista.style.display = ""
+    document.getElementById("resultado").style.display = "none";
     // Recorrer el array y agregar cada nombre como un <li>
     listaAmigos.forEach(amigo => {
         let item = document.createElement("li");
@@ -45,11 +46,19 @@ function actualizarLista() {
 
 // funcion verifica existencia de elementos en la lista
 function sortearAmigo() {
-    let elementosLista = listaAmigos.length; 
+    let elementosLista = listaAmigos.length;
+    let indiceAleatorioAmigo = Math.floor(Math.random()*elementosLista);
+    let amigoSorteo = listaAmigos[indiceAleatorioAmigo];
     console.log(elementosLista)
-    if ( elementosLista<=1){
+    console.log(indiceAleatorioAmigo)
+    if ( elementosLista < 2){
         alert("Ingrese por lo menos dos nombres para realizar sorteo");
         return
     }
-    else alert ("sortear")
+    // se deja de mostrar en pantalla la lista de amigos
+    document.getElementById("listaAmigos").style.display = "none";
+    //se muestra el amigo sorteado
+    document.getElementById("resultado").style.display = ""
+    document.getElementById("resultado").innerHTML = `<li>El amigo sorteado es ${amigoSorteo}</li>`
 }
+
