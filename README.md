@@ -23,13 +23,10 @@ En este proyecto se realiza el juego del amigo secreto del curso de Alura Latam,
 2. **Sortear amigo secreto**:
    - Haz clic en el botón "Sortear amigo".
    - Si la lista tiene al menos dos amigos, el sistema elegirá un amigo secreto aleatorio y lo mostrará en la pantalla.
+3. **Consideraciones**:
+    - En caso de querer reiniciar el sorteo debes actualizar la pagina lo cual dejara todo en las condiciones iniciales
 
 ## Requisitos
 
 Este proyecto utiliza un navegador web moderno que soporte HTML5, CSS3 y JavaScript.
 
-## Instalación
-
-1. Clona este repositorio en tu máquina local:
-   ```bash
-   git clone https://github.com/tu-usuario/amigo-secreto.git
