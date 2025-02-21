@@ -55,8 +55,8 @@ function sortearAmigo() {
     //console.log(elementosLista)
     //console.log(indiceAleatorioAmigo)
     // este if verifica que por lo menos existan 2 nombres antes de generar un sorteo
-    if ( elementosLista < 2){
-        alert("Ingrese por lo menos dos nombres para realizar sorteo");
+    if ( elementosLista <3){
+        alert("Ingrese por lo menos tres nombres para realizar sorteo");
         return
     }
     // se deja de mostrar en pantalla la lista de amigos
@@ -65,4 +65,3 @@ function sortearAmigo() {
     document.getElementById("resultado").style.display = ""
     document.getElementById("resultado").innerHTML = `<li>El amigo sorteado es ${amigoSorteo}</li>`
 }
-
